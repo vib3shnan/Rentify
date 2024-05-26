@@ -1,0 +1,58 @@
+/* BuyerHome.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  .navbar-container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: black;
+  }
+  
+  .buyer-home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px; /* Adjust padding to position below the NavBar */
+  }
+  
+  .search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+  }
+  
+  .search-input {
+    width: 300px;
+    margin-right: 10px;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+  }
+  
+  .search-button {
+    height: calc(1.5em + 0.75rem + 2px);
+    border-radius: 5px;
+  }
+  
+  .suggestions-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 40px 20px;
+
+  }
+  
+  .suggestion-card {
+    margin: 10px;
+    width: 18rem;
+  }
+  

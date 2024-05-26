@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import BuyerHome from "./Components/Home/BuyerHome";
+import LoginSignUp from "./Components/LoginSignUp/LoginSignUp"
+import SellerHome from './Components/Sell/SellerHome.jsx'
+import NavBar from "./Components/NavBar/NavBar.jsx";
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [showSellerHome, setShowSellerHome] = useState(false);
+
+  const handleSignIn = () => {
+    setIsAuthenticated(true);
+  };
+
+  const toggleComponent = () => {
+    setShowSellerHome(prevState => !prevState);
+  };
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <Router>
+      {/* <div>
+      <NavBar  toggleComponent={toggleComponent} showSellerHome={showSellerHome}/>
+      {showSellerHome? <SellerHome/> : <BuyerHome/>} 
+    </div> */}
+      <Routes>
+        <Route path="/" element={isAuthenticated ? <Navigate to="/home" /> : <LoginSignUp />} />
+        <Route path="/home" element={<BuyerHome />} />
+      </Routes>
+    </Router>
+    
   );
 }
 

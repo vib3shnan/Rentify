@@ -1,0 +1,14 @@
+.suggestion-card {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .suggestion-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .suggestion-card img {
+    height: 180px; /* Fixed height for card image */
+    object-fit: cover;
+
+  }
+  
