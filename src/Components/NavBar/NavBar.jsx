@@ -19,17 +19,13 @@ function NavBar() {
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Brand href="#"> RENTIFY</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll" className="justify-content-between">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/">About</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item as={Link} to="/">Action</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/">Another action</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} to="/">Something else here</NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link as={Link} to="/buy">About</Nav.Link>
+            <Nav.Link as={Link} to="/buy">Buy</Nav.Link>  
+            <Nav.Link as={Link} to="/sell">Sell</Nav.Link>
           </Nav>
           <Nav>
             <Button variant="outline-light" onClick={toggleComponent}>
