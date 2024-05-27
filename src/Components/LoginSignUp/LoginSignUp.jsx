@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './LoginSignUp.css';
-import BuyerHome from '../Home/BuyerHome';
+import BuyerHome from '../Buy/BuyerHome';
 import NavBar from '../NavBar/NavBar';
 
 const LoginSignUp = () => {

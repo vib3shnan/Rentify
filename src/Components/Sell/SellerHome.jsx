@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
+import NavBar from '../NavBar/NavBar';
 
 const SellerHome = () => {
   const [amenities, setAmenities] = useState({
@@ -18,6 +19,8 @@ const SellerHome = () => {
   };
 
   return (
+    <div>
+    <NavBar />
     <Container className="mt-5">
       <h1>Seller Form</h1>
       <Form>
@@ -80,6 +83,7 @@ const SellerHome = () => {
         </Button>
       </Form>
     </Container>
+    </div>
   );
 }
 
